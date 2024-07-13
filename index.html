@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product preview page</title>
+    <style>
+        body{
+            background-color: pink;
+        }
+        #main-product-image{
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            border: 1px solid black;
+            border-radius: 20px;
+            box-shadow: 0 0 10px 0 rgba(0,0,0,0.75);
+            margin: 20px auto;
+            display: block;
+        }
+        .product-image{
+            height: 70px;
+            width: 70px;
+            object-fit: cover;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .product-images-container{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <img src="1.jpg" id="main-product-image"/>
+    <div class="product-images-container">
+        <img src="1.jpg" class="product-image" onclick="chngeImage('1.jpg')"/>
+        <img src="2.jpg" class="product-image"  onclick="chngeImage('2.jpg')"/>
+        <img src="3.jpg" class="product-image"  onclick="chngeImage('3.jpg')"/>
+        <img src="4.jpg" class="product-image"  onclick="chngeImage('4.jpg')"/>
+        <img src="5.jpg" class="product-image"  onclick="chngeImage('5.jpg')"/>
+    </div>
+    <script>
+        function chngeImage(imageName){
+    const mainImage = document.getElementById("main-product-image");
+
+    mainImage.src = imageName; 
+    }
+      
+    </script>
+</body>
+</html>
